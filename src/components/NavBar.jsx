@@ -8,9 +8,12 @@ const NavBar = ({
   isFiltered,
 }) => {
   const [isClicked, setIsClicked] = useState(false);
+  const [isClickedLocation, setIsClickedLocation] = useState(false);
   const handleClick = () => {
     setIsClicked(!isClicked);
+    setIsClickedLocation(!isClickedLocation);
   };
+  const uniqueCities = Array.from(new Set(posts.map((post) => post.city)));
 
   return (
     <>
@@ -70,6 +73,14 @@ const NavBar = ({
               </button>
             </div>
           </div>
+          {isClickedLocation &&
+            uniqueCities.map((post, k) => (
+              <div key={k} className="m-5">
+                <p className="text-neutral-600 text-sm font-normal">
+                  {post}, Finland
+                </p>
+              </div>
+            ))}
         </div>
       )}
     </>
