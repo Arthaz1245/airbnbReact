@@ -10,7 +10,7 @@ const Accomodation = ({
   superHost,
 }) => {
   return (
-    <div className="w-[30%] mb-5 max-md:w-[100%] ">
+    <div className="w-[30%] mb-5 max-md:w-[45%] max-sm:w-[100%] ">
       <img
         src={photo ? photo : null}
         alt=""

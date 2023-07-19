@@ -9,9 +9,9 @@ const Home = () => {
   // const [order, setOrder] = useState("");
   const lastPostIndex = currentPage * postPerPage;
   const firstPostIndex = lastPostIndex - postPerPage;
-  const currentPosts = AcommodationsData.slice(firstPostIndex, lastPostIndex);
+  const [postsFiltered, setPostsFiltered] = useState(AcommodationsData);
+  const currentPosts = postsFiltered.slice(firstPostIndex, lastPostIndex);
   const [isFiltered, setIsFiltered] = useState(false);
-  const [postsFiltered, setPostsFiltered] = useState([]);
 
   return (
     <div>
@@ -24,7 +24,7 @@ const Home = () => {
       />
       <Accomodations accomodations={currentPosts} />
       <Pagination
-        totalPosts={AcommodationsData.length}
+        totalPosts={postsFiltered.length}
         postPerPage={postPerPage}
         setPostPerpage={setPostPerPage}
         setCurrentPage={setCurrentPage}
