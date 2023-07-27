@@ -81,14 +81,16 @@ const NavBar = ({ setPostsFiltered, posts }) => {
               className="w-[40%] border border-y-[#F2F2F2] h-[100%] p-4 text-sm"
               onClick={handleClick}
             >
-              <div className="text-stone-300 text-sm font-normal">Location</div>
+              <div className="text-stone-300 text-sm font-normal">
+                {!cityFilter ? `Location` : `${cityFilter}, Finland`}
+              </div>
             </button>
             <button
               className="w-[40%] border border-y-[#F2F2F2] h-[100%] p-4 "
               onClick={handleClick}
             >
               <div className="text-stone-300 text-sm font-normal">
-                Add guests
+                {!guestsFilter ? `Add guest` : `${guestsFilter} guests`}
               </div>
             </button>
             <button className="w-[20%] p-4" onClick={handleClick}>
