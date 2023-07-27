@@ -11,18 +11,13 @@ const Home = () => {
   const firstPostIndex = lastPostIndex - postPerPage;
   const [postsFiltered, setPostsFiltered] = useState(AcommodationsData);
   const currentPosts = postsFiltered.slice(firstPostIndex, lastPostIndex);
-  const [isFiltered, setIsFiltered] = useState(false);
 
   return (
     <div>
-      <NavBar
-        postsFiltered={postsFiltered}
-        setPostsFiltered={setPostsFiltered}
-        posts={AcommodationsData}
-        isFiltered={isFiltered}
-        setIsFiltered={setIsFiltered}
-      />
+      <NavBar setPostsFiltered={setPostsFiltered} posts={AcommodationsData} />
+
       <Accomodations accomodations={currentPosts} />
+
       <Pagination
         totalPosts={postsFiltered.length}
         postPerPage={postPerPage}
