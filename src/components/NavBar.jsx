@@ -107,9 +107,9 @@ const NavBar = ({ setPostsFiltered, posts }) => {
         </div>
       ) : (
         <div className="w-full h-[40%] bg-white pb-28 ">
-          <div className="w-[80%] h-14 bg-[#cf4040] rounded-2xl shadow my-24 mx-24 flex flex-row  max-md:flex-col max-md:justify-between justify-around">
+          <div className="w-[80%] h-14  rounded-2xl shadow my-24 mx-24 flex flex-row  max-md:flex-col max-md:justify-between justify-around">
             <div
-              className="h-[100%] px-10 flex  flex-col   bg-slate-900 max-md:mb-4"
+              className="h-[100%] px-10 flex  flex-col  "
               onClick={handleClickLocation}
             >
               <div className="font-extrabold uppercase">
@@ -157,7 +157,7 @@ const NavBar = ({ setPostsFiltered, posts }) => {
               )}
             </div>
             <div
-              className="h-[100%] px-10 flex  flex-col  max-md:mb-4  bg-slate-900"
+              className="h-[100%] px-10 flex  flex-col  max-md:mb-4 "
               onClick={handleGuestsClickedBtn}
             >
               <div className=" rounded-2xl  w-full h-full">
